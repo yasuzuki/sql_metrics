@@ -15,3 +15,6 @@ gem "jquery-rails"
 
 # To use debugger
 # gem 'debugger'
+gem 'mongo_mapper'
+gem 'bson_ext'
+gem 'pry'
