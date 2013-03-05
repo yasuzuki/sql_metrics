@@ -1,6 +1,6 @@
 require "mongo_mapper"
-require "sql_metrics/metrics"
 require "active_support/notifications"
+require "sql_metrics/engine"
 
 # Setup the MongoMapper
 MongoMapper.database = "sql_metrics-#{Rails.env}"
