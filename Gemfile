@@ -18,3 +18,6 @@ gem "jquery-rails"
 gem 'mongo_mapper'
 gem 'bson_ext'
 gem 'pry'
+gem 'pry-rails'
+gem 'capybara'
+gem 'capybara-webkit'

@@ -1,0 +1,623 @@
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Started GET "/users/new" for 127.0.0.1 at 2013-03-06 06:49:37 +0900
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 44ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Started GET "/users/new" for 127.0.0.1 at 2013-03-06 06:58:46 +0900
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 42ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Started GET "/users/new" for 127.0.0.1 at 2013-03-06 07:03:53 +0900
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 70ms
+Started GET "/users/new" for 127.0.0.1 at 2013-03-06 07:05:01 +0900
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (100.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (4.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateUsers (20130305214904)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "age" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130305214904')[0m
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/users/new" for 127.0.0.1 at 2013-03-06 07:07:58 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (13.6ms)
+  Rendered users/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 129ms (Views: 46.6ms | ActiveRecord: 0.4ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-06 07:07:58 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+BSON::InvalidDocument: Cannot serialize an object of class ActiveRecord::ConnectionAdapters::SQLiteColumn into BSON.: INSERT INTO "users" ("age", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 40ms
+  [1m[35m (1.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (5.0ms)[0m  [1mDROP TABLE `users`[0m
+  [1m[35m (17.1ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `age` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+Connecting to database specified by database.yml
+  [1m[36m (5.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (4.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-06 07:28:19 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (12.8ms)
+  Rendered users/new.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 121ms (Views: 43.9ms | ActiveRecord: 4.7ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-06 07:28:19 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-05 22:28:19', 'John Doe', '2013-03-05 22:28:19')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 41ms (ActiveRecord: 0.9ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-03-06 07:28:19 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 3.9ms | ActiveRecord: 1.5ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-06 07:28:19 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 19ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (4.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-06 22:44:33 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (52.1ms)
+  Rendered users/new.html.erb within layouts/application (68.8ms)
+Completed 200 OK in 206ms (Views: 94.3ms | ActiveRecord: 4.2ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-06 22:44:33 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-06 13:44:33', 'John Doe', '2013-03-06 13:44:33')
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/3
+Completed 302 Found in 29ms (ActiveRecord: 0.9ms)
+Started GET "/users/3" for 127.0.0.1 at 2013-03-06 22:44:33 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 21ms (Views: 5.6ms | ActiveRecord: 0.7ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-06 22:44:33 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 22ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (4.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-06 23:53:06 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (12.8ms)
+  Rendered users/new.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 120ms (Views: 43.0ms | ActiveRecord: 5.8ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-06 23:53:06 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.9ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-06 14:53:06', 'John Doe', '2013-03-06 14:53:06')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/5
+Completed 302 Found in 22ms (ActiveRecord: 3.4ms)
+Started GET "/users/5" for 127.0.0.1 at 2013-03-06 23:53:06 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-06 23:53:07 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 18ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (4.9ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-06 23:54:57 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (12.2ms)
+  Rendered users/new.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 113ms (Views: 42.3ms | ActiveRecord: 3.5ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-06 23:54:57 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-06 14:54:57', 'John Doe', '2013-03-06 14:54:57')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/6
+Completed 302 Found in 19ms (ActiveRecord: 0.8ms)
+Started GET "/users/6" for 127.0.0.1 at 2013-03-06 23:54:57 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-06 23:54:57 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 17ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (97.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (5.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-06 23:59:44 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (12.7ms)
+  Rendered users/new.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 123ms (Views: 44.3ms | ActiveRecord: 4.9ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-06 23:59:45 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-06 14:59:45', 'John Doe', '2013-03-06 14:59:45')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/7
+Completed 302 Found in 40ms (ActiveRecord: 0.8ms)
+Started GET "/users/7" for 127.0.0.1 at 2013-03-06 23:59:45 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-06 23:59:45 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 18ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (5.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-07 00:06:47 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (12.4ms)
+  Rendered users/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 116ms (Views: 42.3ms | ActiveRecord: 4.0ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-07 00:06:48 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-06 15:06:48', 'John Doe', '2013-03-06 15:06:48')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 40ms (ActiveRecord: 1.2ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-03-07 00:06:48 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-07 00:06:48 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (4.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-07 00:15:07 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (12.5ms)
+  Rendered users/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 116ms (Views: 42.4ms | ActiveRecord: 3.5ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-07 00:15:08 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-06 15:15:08', 'John Doe', '2013-03-06 15:15:08')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/1
+Completed 302 Found in 41ms (ActiveRecord: 0.7ms)
+Started GET "/users/1" for 127.0.0.1 at 2013-03-07 00:15:08 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-07 00:15:08 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 18ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (2.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (5.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-07 07:02:12 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (13.3ms)
+  Rendered users/new.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 117ms (Views: 42.1ms | ActiveRecord: 5.4ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-07 07:02:12 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-06 22:02:12', 'John Doe', '2013-03-06 22:02:12')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/2
+Completed 302 Found in 21ms (ActiveRecord: 0.9ms)
+Started GET "/users/2" for 127.0.0.1 at 2013-03-07 07:02:12 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-07 07:02:12 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (325585.5ms)
+Completed 500 Internal Server Error in 325598ms
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (5.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-07 07:07:53 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (12.6ms)
+  Rendered users/new.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 121ms (Views: 44.5ms | ActiveRecord: 5.1ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-07 07:07:53 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-06 22:07:53', 'John Doe', '2013-03-06 22:07:53')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/3
+Completed 302 Found in 19ms (ActiveRecord: 0.8ms)
+Started GET "/users/3" for 127.0.0.1 at 2013-03-07 07:07:53 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-07 07:07:53 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 17ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (2.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (4.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-07 07:13:14 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (12.4ms)
+  Rendered users/new.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 116ms (Views: 43.7ms | ActiveRecord: 3.6ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-07 07:13:14 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-06 22:13:14', 'John Doe', '2013-03-06 22:13:14')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/4
+Completed 302 Found in 42ms (ActiveRecord: 0.8ms)
+Started GET "/users/4" for 127.0.0.1 at 2013-03-07 07:13:14 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-07 07:13:14 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 18ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+Started GET "/sql_metrics/5137bf7acf4c8094da000006" for 127.0.0.1 at 2013-03-07 07:13:14 +0900
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (6.9ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-07 07:19:31 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (13.3ms)
+  Rendered users/new.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 118ms (Views: 42.3ms | ActiveRecord: 3.5ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-07 07:19:32 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-06 22:19:32', 'John Doe', '2013-03-06 22:19:32')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/5
+Completed 302 Found in 41ms (ActiveRecord: 0.7ms)
+Started GET "/users/5" for 127.0.0.1 at 2013-03-07 07:19:32 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-07 07:19:32 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (88798.5ms)
+Completed 500 Internal Server Error in 88810ms
+  [1m[36m (92.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (11.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-07 22:01:34 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (14.8ms)
+  Rendered users/new.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 127ms (Views: 47.5ms | ActiveRecord: 8.1ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-07 22:01:35 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (6.8ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-07 13:01:35', 'John Doe', '2013-03-07 13:01:35')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/6
+Completed 302 Found in 28ms (ActiveRecord: 7.2ms)
+Started GET "/users/6" for 127.0.0.1 at 2013-03-07 22:01:35 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (1.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 35ms (Views: 3.9ms | ActiveRecord: 1.9ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-07 22:01:35 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 17ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+Started GET "/sql_metrics/51388faecf4c809a01000006" for 127.0.0.1 at 2013-03-07 22:01:35 +0900
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (5.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-07 22:38:13 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (12.5ms)
+  Rendered users/new.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 121ms (Views: 44.3ms | ActiveRecord: 5.2ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-07 22:38:13 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-07 13:38:13', 'John Doe', '2013-03-07 13:38:13')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/7
+Completed 302 Found in 18ms (ActiveRecord: 0.8ms)
+Started GET "/users/7" for 127.0.0.1 at 2013-03-07 22:38:13 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 3.7ms | ActiveRecord: 0.7ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-07 22:38:13 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 17ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+Started GET "/sql_metrics/51389845cf4c809b01000006" for 127.0.0.1 at 2013-03-07 22:38:46 +0900
+Started GET "/sql_metrics/51389845cf4c809b01000006" for 127.0.0.1 at 2013-03-07 22:43:26 +0900
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (4.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (4.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (5.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-07 22:48:54 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (13.4ms)
+  Rendered users/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 118ms (Views: 44.0ms | ActiveRecord: 5.8ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-03-07 22:48:54 +0900
+Compiled scaffold.css  (0ms)  (pid 41350)
+Compiled users.css  (0ms)  (pid 41350)
+Compiled application.css  (16ms)  (pid 41350)
+Served asset /application.css - 200 OK (33ms)
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-03-07 22:48:54 +0900
+Compiled jquery.js  (23ms)  (pid 41350)
+Compiled jquery_ujs.js  (0ms)  (pid 41350)
+Compiled users.js  (0ms)  (pid 41350)
+Compiled application.js  (265ms)  (pid 41350)
+Served asset /application.js - 200 OK (448ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-07 22:48:54 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-07 13:48:54', 'John Doe', '2013-03-07 13:48:54')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:50077/users/8
+Completed 302 Found in 21ms (ActiveRecord: 1.0ms)
+Started GET "/users/8" for 127.0.0.1 at 2013-03-07 22:48:55 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-07 22:48:55 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+Started DELETE "/sql_metrics/51389ac6cf4c80a186000006" for 127.0.0.1 at 2013-03-07 22:48:55 +0900
+Processing by SqlMetricsController#destroy as HTML
+  Parameters: {"id"=>"51389ac6cf4c80a186000006"}
+Redirected to http://127.0.0.1:50077/sql_metrics
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-07 22:48:55 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 13ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (4.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-07 22:58:28 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (13.7ms)
+  Rendered users/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 122ms (Views: 42.4ms | ActiveRecord: 6.4ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-07 22:58:28 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-07 13:58:28', 'John Doe', '2013-03-07 13:58:28')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/9
+Completed 302 Found in 40ms (ActiveRecord: 0.8ms)
+Started GET "/users/9" for 127.0.0.1 at 2013-03-07 22:58:28 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-07 22:58:28 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 17ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+Started GET "/sql_metrics/51389d04cf4c80a1b2000006" for 127.0.0.1 at 2013-03-07 22:58:28 +0900
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (4.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130305214904)
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/users/new" for 127.0.0.1 at 2013-03-07 22:58:43 +0900
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (13.1ms)
+  Rendered users/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 118ms (Views: 43.7ms | ActiveRecord: 6.1ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-03-07 22:58:43 +0900
+Served asset /application.css - 200 OK (10ms)
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-03-07 22:58:43 +0900
+Served asset /application.js - 200 OK (114ms)
+Started POST "/users" for 127.0.0.1 at 2013-03-07 22:58:43 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"John Doe", "age"=>"23"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`age`, `created_at`, `name`, `updated_at`) VALUES (23, '2013-03-07 13:58:43', 'John Doe', '2013-03-07 13:58:43')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:50107/users/10
+Completed 302 Found in 41ms (ActiveRecord: 0.8ms)
+Started GET "/users/10" for 127.0.0.1 at 2013-03-07 22:58:43 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-07 22:58:43 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 17ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+Started DELETE "/sql_metrics/51389d13cf4c80a1c7000006" for 127.0.0.1 at 2013-03-07 22:58:43 +0900
+Processing by SqlMetricsController#destroy as HTML
+  Parameters: {"id"=>"51389d13cf4c80a1c7000006"}
+Redirected to http://127.0.0.1:50107/sql_metrics
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+Started GET "/sql_metrics" for 127.0.0.1 at 2013-03-07 22:58:43 +0900
+Processing by SqlMetricsController#index as HTML
+  Rendered /Users/yas/Documents/github/sql_metrics/app/views/sql_metrics/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m

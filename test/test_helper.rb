@@ -17,3 +17,7 @@ end
 class ActiveSupport::TestCase
   setup { SqlMetrics::Metric.delete_all }
 end
+
+ActiveRecord::Migrator.migrate(
+  File.expand_path("../dummy/db/migrate", __FILE__)
+)
