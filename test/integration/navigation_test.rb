@@ -24,4 +24,21 @@ class NavigationTest < ActiveSupport::IntegrationCase
       first(:link, "Destroy").click
     end
   end
+
+  test 'can ignore notifications for a given path' do
+    # Metric count increases when it visit users path without setting of mute_regexp.
+    assert_difference "SqlMetrics::Metric.count", 4 do
+      visit "/users"
+    end
+
+    # Metric count don't increases when it visit users path after setting of mute_regexp.
+    begin
+      SqlMetrics.mute_regexp = %r(^/users)
+      assert_no_difference "SqlMetrics::Metric.count" do
+        visit "/users"
+      end
+    ensure
+      SqlMetrics.mute_regexp = nil
+    end
+  end
 end
