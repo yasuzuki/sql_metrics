@@ -11,6 +11,7 @@ class NavigationTest < ActiveSupport::IntegrationCase
     fill_in "Name", with: "John Doe"
     fill_in "Age", with: "23"
     click_button "Create User"
+    SqlMetrics.finish!
 
     # Check for the metric data on the page
     visit sql_metrics_path
@@ -29,6 +30,7 @@ class NavigationTest < ActiveSupport::IntegrationCase
     # Metric count increases when it visit users path without setting of mute_regexp.
     assert_difference "SqlMetrics::Metric.count", 4 do
       visit "/users"
+      SqlMetrics.finish!
     end
 
     # Metric count don't increases when it visit users path after setting of mute_regexp.
@@ -36,6 +38,7 @@ class NavigationTest < ActiveSupport::IntegrationCase
       SqlMetrics.mute_regexp = %r(^/users)
       assert_no_difference "SqlMetrics::Metric.count" do
         visit "/users"
+        SqlMetrics.finish!
       end
     ensure
       SqlMetrics.mute_regexp = nil
